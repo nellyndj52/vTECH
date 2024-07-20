@@ -1,0 +1,564 @@
+/* General and Reset Styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 0;
+  position: relative;
+}
+
+/* Background with whitish blur effect */
+.body-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Background/background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -2;
+}
+.body-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Whitish overlay */
+  z-index: -1;
+}
+
+/* Header Styling */
+.header {
+  background: rgba(128, 0, 128, 0.3);
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.header-right input[type="text"] {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+.header-right input[type="text"]:focus {
+  border-color: #0071e3;
+  outline: none;
+}
+.dark-mode-toggle {
+  background-color: #0071e3;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for general text */
+}
+
+/* Apply Dark Tint and Blur to Background */
+body.dark-mode::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay with opacity */
+    backdrop-filter: blur(6px); /* Slightly reduced blur effect */
+    z-index: -1; /* Place behind content */
+}
+
+/* Header in Dark Mode */
+body.dark-mode .header {
+    background: rgba(0, 0, 0, 0.2); /* Lighter transparent background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Navigation in Dark Mode */
+body.dark-mode .nav {
+    background-color: rgba(28, 28, 28, 0.6); /* Lighter dark background */
+    color: #e0e0e0; /* Light text color */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+/* Glass Box Styling in Dark Mode */
+body.dark-mode .glass-box {
+    background: rgba(0, 0, 0, 0.3); /* Lighter glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    backdrop-filter: blur(8px); /* Slightly reduced blur effect */
+}
+
+/* Info Box Styling in Dark Mode */
+body.dark-mode .info-box {
+    background: rgba(0, 0, 0, 0.4); /* Lighter glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Lighter shadow */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Product Card in Dark Mode */
+body.dark-mode .product-card {
+    background: rgba(0, 0, 0, 0.4); /* Lighter dark background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Lighter shadow */
+	color: #e0e0e0; /* Light text color */
+	
+
+}
+
+/* Product Card in Dark Mode */
+body.dark-mode .product-card h2 {
+   
+   
+	color: #e0e0e0; /* Light text color */
+	
+}
+
+/* Product Name Styling in Dark Mode */
+body.dark-mode .product-card .product-name,
+body.dark-mode .product-name {
+    color: #ffffff; /* White text color for product names */
+}
+
+/* Footer in Dark Mode */
+body.dark-mode .footer {
+    background: rgba(28, 28, 28, 0.6); /* Lighter dark background for footer */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Modal in Dark Mode */
+body.dark-mode .modal {
+    background-color: rgba(0, 0, 0, 0.8); /* Lighter modal background */
+}
+
+/* Modal Content in Dark Mode */
+body.dark-mode .modal-content {
+    background: rgba(0, 0, 0, 0.7); /* Lighter background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Lighter shadow */
+    color: #e0e0e0; /* Light text color */
+}
+
+
+
+
+
+/* Navigation Styling */
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #005bb5;
+  border-bottom: 1px solid #00438c;
+  z-index: 2;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+.nav a:hover {
+  color: #e0e0e0;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.sidebar {
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 20px;
+}
+.main-content {
+  width: 75%;
+}
+
+/* Glass Box Styling */
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.glass-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+.glass-box ul li {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #0071e3;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.glass-box ul li:hover {
+  color: #005bb5;
+}
+.info-box {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Grid Styling */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 10px;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.product-image {
+  cursor: zoom-in; /* Change cursor to indicate zoom functionality */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+.product-image:hover {
+  transform: scale(1.1); /* Scale up image to 110% */
+  z-index: 10; /* Bring image to the front */
+  cursor: zoom-out; /* Change cursor to indicate image can be zoomed out */
+}
+.product-card h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+.product-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+.product-card .price {
+  font-size: 1.1em;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.product-card .add-to-cart {
+  background-color: #0071e3;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.product-card .add-to-cart:hover {
+  background-color: #005bb5;
+}
+
+/* Footer Styling */
+.footer {
+  background: #333; /* Dark background for contrast */
+  color: #fff; /* Light text color for readability */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #444; /* Subtle border for separation */
+}
+.footer .social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px; /* Space between icons and text */
+}
+.footer .social-icons a {
+  text-decoration: none;
+}
+.footer .social-icons img {
+  width: 35px; /* Slightly larger icons */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.footer .social-icons img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.8; /* Slight opacity change */
+}
+.footer p {
+  margin: 0;
+  font-size: 0.9em; /* Slightly smaller font size */
+  color: #eee; /* Light color for better contrast */
+}
+.footer .footer-links {
+  margin-bottom: 15px; /* Space between links and info text */
+}
+.footer .footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin: 0 10px; /* Space between links */
+  transition: color 0.3s ease;
+}
+.footer .footer-links a:hover {
+  color: #00bcd4; /* Change color on hover */
+}
+.footer .newsletter {
+  margin-bottom: 15px; /* Space between newsletter and other elements */
+}
+.footer .newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  font-size: 1em;
+  margin-right: -5px; /* Overlap the button */
+}
+.footer .newsletter button {
+  padding: 10px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  font-size: 1em;
+  background-color: #0071e3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.footer .newsletter button:hover {
+  background-color: #005bb5;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 50vh; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow to prevent horizontal scrolling */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+}
+
+/* Slide images */
+.slide-image {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Cover the container */
+    display: block; /* Ensure images are block elements */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+    border-radius: 50%; /* Round buttons */
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color */
+    z-index: 3; /* Ensure buttons are above images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 50%; /* Round button */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Background for readability */
+    border-radius: 0 0 15px 15px; /* Match image corners */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Active dot */
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 } 
+    to { opacity: 1 }
+}
+
+/* On smaller screens, adjust button and text sizes */
+@media only screen and (max-width: 600px) {
+    .prev, .next {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+}
+
+
+
+/* Existing CSS */
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    color: #e0e0e0;
+}
+
+.close {
+    color: #e0e0e0;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+
+.modal-title {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.modal-description {
+    margin-top: 10px;
+}
+
+.modal-price {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}

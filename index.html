@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vTECH Store</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="body-background"></div>
+
+    <div class="header">
+        <h1>vTECH Store</h1>
+        <div class="header-right">
+            <input type="text" placeholder="Search...">
+            <button class="dark-mode-toggle">Dark Mode</button>
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="phones.html">Phones</a>
+        <a href="#">Laptops</a>
+        <a href="#">Desktops</a>
+        <a href="#">Tablets</a>
+        <a href="#">Accessories</a>
+        <a href="#">Smart Home</a>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="glass-box">
+                <h2>Phones</h2>
+                <ul>
+                    <li>High End</li>
+                    <li>Midrange</li>
+                </ul>
+            </div>
+            <div class="glass-box">
+                <h2>Laptops</h2>
+                <ul>
+                    <li>High End</li>
+                    <li>Midrange</li>
+                </ul>
+            </div>
+            <div class="glass-box">
+                <h2>Desktops</h2>
+                <ul>
+                    <li>High End</li>
+                    <li>Midrange</li>
+                </ul>
+            </div>
+            <div class="glass-box">
+                <h2>Tablets</h2>
+                <ul>
+                    <li>High End</li>
+                    <li>Midrange</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="info-box">
+                <p>Welcome to vTECH! Discover the best products and deals here.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product cards -->
+                <div class="product-card" data-title="iPhone 13 Pro" data-description="High-end smartphone with advanced features." data-price="$999" onclick="openModal(this)">
+                    <img src="images/iphone13pro.jpg" alt="iPhone 13 Pro" class="product-image zoomable">
+                    <h2>iPhone 13 Pro</h2>
+                    <p>High-end smartphone with advanced features.</p>
+                    <p class="price">$999</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="MacBook Pro" data-description="Powerful laptop for professionals." data-price="$1,299" onclick="openModal(this)">
+                    <img src="images/macbookpro.jpg" alt="MacBook Pro" class="product-image zoomable">
+                    <h2>MacBook Pro</h2>
+                    <p>Powerful laptop for professionals.</p>
+                    <p class="price">$1,299</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="iMac" data-description="All-in-one desktop computer." data-price="$1,099" onclick="openModal(this)">
+                    <img src="images/imac.jpg" alt="iMac" class="product-image zoomable">
+                    <h2>iMac</h2>
+                    <p>All-in-one desktop computer.</p>
+                    <p class="price">$1,099</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="iPad Pro" data-description="High-performance tablet for creative work." data-price="$799" onclick="openModal(this)">
+                    <img src="images/ipadpro.jpg" alt="iPad Pro" class="product-image zoomable">
+                    <h2>iPad Pro</h2>
+                    <p>High-performance tablet for creative work.</p>
+                    <p class="price">$799</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="Samsung Galaxy S21" data-description="Premium Android smartphone." data-price="$799" onclick="openModal(this)">
+                    <img src="images/samsunggalaxys21.jpg" alt="Samsung Galaxy S21" class="product-image zoomable">
+                    <h2>Samsung Galaxy S21</h2>
+                    <p>Premium Android smartphone.</p>
+                    <p class="price">$799</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="Dell XPS 13" data-description="Ultra-portable laptop with high-end performance." data-price="$1,099" onclick="openModal(this)">
+                    <img src="images/dellxps13.jpg" alt="Dell XPS 13" class="product-image zoomable">
+                    <h2>Dell XPS 13</h2>
+                    <p>Ultra-portable laptop with high-end performance.</p>
+                    <p class="price">$1,099</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="Apple Watch" data-description="Stylish and functional smartwatch." data-price="$399" onclick="openModal(this)">
+                    <img src="images/applewatch.jpg" alt="Apple Watch" class="product-image zoomable">
+                    <h2>Apple Watch</h2>
+                    <p>Stylish and functional smartwatch.</p>
+                    <p class="price">$399</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card" data-title="Microsoft Surface Pro" data-description="Versatile tablet for work and entertainment." data-price="$899" onclick="openModal(this)">
+                    <img src="images/microsoftsurfacepro.jpg" alt="Microsoft Surface Pro" class="product-image zoomable">
+                    <h2>Microsoft Surface Pro</h2>
+                    <p>Versatile tablet for work and entertainment.</p>
+                    <p class="price">$899</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="social-icons">
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-info">
+            <p>&copy; <span class="year">2024</span> vTECH Store. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Product Image" class="modal-image">
+                <div class="modal-details">
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                    <p id="modalDescription" class="modal-description"></p>
+                    <p id="modalPrice" class="modal-price"></p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
